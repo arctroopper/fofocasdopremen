@@ -1,110 +1,46 @@
-<html>
-<head>
-  <title>fofocas do premen</title>
-  <style>
-  * {
-    background-color: #D3D3D3;
-    font-family: "Georgia", serif;
-  }
-  #title
-  {
-    color: black;
-    font-size: 64px;
-    margin-top: 32px;
-    margin-bottom: 12px;
-  }
-  #desc
-  {
-    color: black;
-    font-size: 16px;
-    margin-bottom: 48px;
-  }
-  #messages
-  {
-    resize: none;
-    width: 50%;
-    height: 25em;
-    font-size: 16px;
-    line-height: 200%;
-    padding-top: 16px;
-    padding-left: 24px;
-  }
-  #text
-  {
-    color: black;
-    resize: none;
-    width: 55%;
-    height: 4em;
-    font-size: 24px;
-  }
-  #subtit
-  {
-    color: black;
-  }
-  #numClients{
-    color: black;
-  }
-  #btn
-  {
-    padding: 6px 16px;
-    font-size: 32px;
-    border: none;
-    border-radius: 4px;
-    color: rgb(87, 80, 80);
-    background-color: #6496c8;
-    text-shadow: -1px 1px #417cb8;
-  }
-  </style>
+<!DOCTYPE HTML> 
+<html> 
+  
+<head> 
+    <title> 
+      Eu te amo, sabia?
+    </title>
 </head>
 
-<body bgcolor="lightgray">
-  <div align="center">
-    <p id="title">Fofocas do Premen</p>
-    <p id="subtit">O site pra você ouvir as maiores fofocas da escola</p>
-  <p id="desc">pode fofocar sem medo, é tudo anonimo</p>
-    <textarea id="messages" readonly="1"></textarea>
-    <h3 id="numClients">fofoqueires on: 0</h1>
-    <textarea id="text" placeholder="Digite aq" autofocus="1"></textarea>
-    <br>
-    <button id="btn" onclick="btnOnclick()">Enviar</button>
-  </div>
-</body>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+</style>
+  
+<body style = "text-align:center;"> 
+      
+    <h1 style = "color: red; font-family: Inter"> 
+        oi Bane, eu já disse que te amo hj? 
+    </h1> 
+      <p style="font-family: Inter;">se não, clica no botão abaixo amor :)</p>
+      
+    <button id = "button" onclick = "GFG_Fun()"> 
+        Clica aq meu bem
+    </button> 
+      
+    <p id = "GFG_DOWN" style = "font-family: 'Inter', sans-serif; "> 
+    </p> 
 
-<script src="/socket.io/socket.io.js"></script>
-<script>
-
-  function onNumClients(msg)
-  {
-    document.getElementById('numClients').innerHTML = 'Fofoqueires on: ' + msg;
-  }
-
-  function onMessages(msgs)
-  {
-    let acc = '';
-    for(msg of msgs) {
-      acc += msg + '\n';
-    }
-    acc.trimRight();
-    document.getElementById('messages').value = acc;
-  }
-
-  function onSynth(msg)
-  {
-    document.getElementById('messages').value += msg + '\n';
-  }
-
-  var socket = io();
-
-  socket.on('numClients', onNumClients);
-
-  socket.on('messages', onMessages);
-
-  socket.on('synth', onSynth);
-
-  function btnOnclick()
-  {
-    socket.emit('send_synth', document.getElementById('text').value);
-  }
-
-</script>
+    <script>
+               var up = document.getElementById('GFG_UP'); 
+        var down = document.getElementById('GFG_DOWN'); 
+          
+        var arr = ["eu te amo tanto que se tu pedisse pra eu bloquear o neymar eu bloquearia", "por ti eu virava conservador",
+                "eu poderia passar todos os dias do teu lado e ainda nao me cansaria da tua presença", "toda vez q eu penso em ti eu dou um sorriso do nd", "sempre q tu fala q me ama eu fico todo bobo 😳", "eu veria boruto cntg", "essa msg vale 1 ifood pago por mim, pede oq tu quiser", "nem 2 NVIDIA Quadro RTX 8000 poderiam reproduzir teus graficos de beleza", "tu gosta de cachorro? se quiser eu posso latir pra ti 😳", "se eu fosse um refri eu seria um soda, pq no meu coração soda pra vc", "vc é uma rede de wifi? pq eu to sentindoo uma conexao entre nós", "c é tão lindo q eu até esqueci a cantada", "deixa eu pegar na tua teta pf <3", "sabe qual é o menu? Me N' U", "cara, eu te amo.", "baby você é o naruto do meu saske, mas nao se sinta sozinha, drake & josh sem camisinha <3", "top 1 pessoas q eu mais amo, 1 - tu", "se tu fosse minha mãe eu seria o édipo", "você é o compilador do meu código", "eu quero criar alguns animaiszinhos cntg 😳", "se eu for morrer um dia, quero q seja abraçadinho cntg", "eu diria que eu quero ser o teu romeu e tu a julietta, mas eles so passaram dois dias juntos, e eu quero passar a eternidade cntg", "* SMEK *", "🥺🥺🥺🥺"];
+          
+        up.innerHTML = "se não. clica no botão pra ver uma declaração :) "
+               + "<br><br>" + arr;
+          
+        function GFG_Fun() {
+            down.innerHTML = 
+                arr[Math.floor(Math.random() * arr.length)];
+        } 
+    </script>
+      
+</body> 
+  
 </html>
