@@ -1,46 +1,175 @@
-<!DOCTYPE HTML> 
-<html> 
-  
-<head> 
-    <title> 
-      Eu te amo, sabia?
-    </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo...</title>
 </head>
-
-<style type="text/css">
+<body>
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-</style>
-  
-<body style = "text-align:center;"> 
-      
-    <h1 style = "color: red; font-family: Inter"> 
-        oi Bane, eu já disse que te amo hj? 
-    </h1> 
-      <p style="font-family: Inter;">se não, clica no botão abaixo amor :)</p>
-      
-    <button id = "button" onclick = "GFG_Fun()"> 
-        Clica aq meu bem
-    </button> 
-      
-    <p id = "GFG_DOWN" style = "font-family: 'Inter', sans-serif; "> 
-    </p> 
 
-    <script>
-               var up = document.getElementById('GFG_UP'); 
-        var down = document.getElementById('GFG_DOWN'); 
-          
-        var arr = ["eu te amo tanto que se tu pedisse pra eu bloquear o neymar eu bloquearia", "por ti eu virava conservador",
-                "eu poderia passar todos os dias do teu lado e ainda nao me cansaria da tua presença", "toda vez q eu penso em ti eu dou um sorriso do nd", "sempre q tu fala q me ama eu fico todo bobo 😳", "eu veria boruto cntg", "essa msg vale 1 ifood pago por mim, pede oq tu quiser", "nem 2 NVIDIA Quadro RTX 8000 poderiam reproduzir teus graficos de beleza", "tu gosta de cachorro? se quiser eu posso latir pra ti 😳", "se eu fosse um refri eu seria um soda, pq no meu coração soda pra vc", "vc é uma rede de wifi? pq eu to sentindoo uma conexao entre nós", "c é tão lindo q eu até esqueci a cantada", "deixa eu pegar na tua teta pf <3", "sabe qual é o menu? Me N' U", "cara, eu te amo.", "baby você é o naruto do meu saske, mas nao se sinta sozinha, drake & josh sem camisinha <3", "top 1 pessoas q eu mais amo, 1 - tu", "se tu fosse minha mãe eu seria o édipo", "você é o compilador do meu código", "eu quero criar alguns animaiszinhos cntg 😳", "se eu for morrer um dia, quero q seja abraçadinho cntg", "eu diria que eu quero ser o teu romeu e tu a julietta, mas eles so passaram dois dias juntos, e eu quero passar a eternidade cntg", "* SMEK *", "🥺🥺🥺🥺"];
-          
-        up.innerHTML = "se não. clica no botão pra ver uma declaração :) "
-               + "<br><br>" + arr;
-          
-        function GFG_Fun() {
-            down.innerHTML = 
-                arr[Math.floor(Math.random() * arr.length)];
-        } 
-    </script>
-      
-</body> 
+html,body,div {
+  height: 100%; 
+  background-color: #1d1d1d;
+ 
+ }
+ 
+ div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .btn {
+   display: grid;
+   color: black;
+   font-family: Inter;
+  box-sizing: border-box;
+  line-height: 300%;
+   text-align: center;
+   width: 30%;
+   height: 5%;
+   position: relative;
+   background: linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752);
+   background-size: 400% 100%;
+   text-transform: uppercase;
+   font-weight: 700;
+   border: none;
+   border-radius: 0.25em;
+   font-size: 13px;
+   letter-spacing: 1px;
+   padding: 0;
+   margin: 0;
+   animation: Gradient 4s ease infinite;
+   text-decoration: none;
+ }
+ 
+ .btn div {
+   color: black;
+   min-height: 80px;
+   padding: 0 1.618em;
+   border-radius: inherit;
+   background-size: inherit;
+   background-image: inherit;
+   animation: Gradient 4s ease infinite;
+   position: relative;
+   z-index: 1;
+   mix-blend-mode: overlay;
+   font-family: 'Helvetica Neue';
+   
+ }
+ 
+ @keyframes Gradient {
+   50% {
+     background-position: 140% 50%;
+     transform: skew(-2deg);
+   }
+ }
+ 
+ .btn::after {
+   content: '';
+   position: absolute;
+   background-size: inherit;
+   background-image: inherit;
+   animation: inherit;
+   left: 0px;
+   right: 0px;
+   top: 2px;
+   height: 100%;
+   filter: blur(1rem);
+ }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #1d1d1d;
+}
+
+.textin1 {
+  display: grid;
+  color: black;
+  font-family: Inter;
+ box-sizing: border-box;
+ line-height: 300%;
+  text-align: center;
+  width: 30%;
+  height: 5%;
+  position: relative;
+  background: linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752);
+  background-size: 400% 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  animation: Gradient 4s ease infinite;
+  text-decoration: none;
+}
+
+.textin1 div {
+  color: black;
+  min-height: 80px;
+  padding: 0 1.618em;
+  border-radius: inherit;
+  background-size: inherit;
+  background-image: inherit;
+  animation: Gradient 4s ease infinite;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: overlay;
+  font-family: 'Helvetica Neue';
   
+}
+
+@keyframes Gradient {
+  90% {
+    background-position: 140% 50%;
+    transform: skew(-2deg);
+  }
+}
+
+.textin1::after {
+  content: '';
+  position: absolute;
+  background-size: inherit;
+  background-image: inherit;
+  animation: inherit;
+  left: 0px;
+  right: 0px;
+  top: 2px;
+  height: 100%;
+  filter: blur(1rem);
+}
+
+.textin1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  </style>
+    <div class="button-container">
+        <a href="eu-ainda-t-amo.herokuapp.com" class="btn" onclick="popupis();cum()"><span>Clica aq :)<span></a>
+      </div>
+      
+      
+      <div class="popup" id="popup">
+        <div class="textin1">
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
 </html>
