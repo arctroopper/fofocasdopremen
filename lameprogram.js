@@ -11,13 +11,13 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   numClients++;
-  console.log('a user connected');
+  console.log('um viado entrou');
   socket.emit('numClients', numClients);
   socket.emit('messages', messages);
 
   socket.on('disconnect', function(){
     numClients--;
-    console.log('user disconnected');
+    console.log('um viado saiu');
     socket.broadcast.emit('numClients', numClients);
   });
 
@@ -30,5 +30,5 @@ io.on('connection', function(socket){
 });
 
 server.listen(process.env.PORT || 3000, function(){
-  console.log('listening on *:' + (process.env.PORT || 3000));
+  console.log('ovindo *:' + (process.env.PORT || 3000));
 });
